@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga';
-import { useLocation } from 'react-router-dom';
+
+
 
 const GoogleAnalytics = ({ children }) => {
     let trackingId;
