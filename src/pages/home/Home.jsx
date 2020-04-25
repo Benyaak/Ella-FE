@@ -57,7 +57,7 @@ export const Home = () => {
       </Navbar>
       <ColoredLine color="gray" />
       <div>Home Component</div>
-      <PDFViewer path='./Report.pdf' />
+      <PDFViewer path='./Document_Medical_Stef.pdf' />
     </div>
   );
 };
