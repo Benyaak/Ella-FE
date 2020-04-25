@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import HeaderBar from '../../components/Molecules/header-bar/HeaderBar'
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -7,7 +8,10 @@ export const Home = () => {
     type: 'TRIGGER_INITIAL_STATE',
   });
   return (
-    <div>Home Component</div>
+    <div>
+      <HeaderBar isLoggedIn={false} />
+      <div>Home Component</div>
+    </div>
   );
 };
 

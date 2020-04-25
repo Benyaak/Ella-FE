@@ -14,6 +14,7 @@ import { Home } from '../pages/home/Home';
 
 // Styles
 import { GlobalStyles } from '../styles/Global';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
