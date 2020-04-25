@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import HeaderBar from '../../components/Molecules/header-bar/HeaderBar'
+import Page from '../../utils/pages/Page';
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -9,10 +9,9 @@ export const Home = () => {
   });
   return (
     <div>
-      <HeaderBar isLoggedIn={false} />
       <div>Home Component</div>
     </div>
   );
 };
 
-export default Home;
+export default Page(Home);
