@@ -8,7 +8,7 @@ class RatingButtons extends Component {
         super();
         this.state = {
             ratingValue: null,
-            editorText : '<div>Hello dear user!</div><div>Hope you enjoyed the experience of <b>ELLA</b> Electronic Learning Assistant :) coae ce somn mi e</div><div><br></div>',
+            editorText : '<div>Hello dear user!</div><div>Hope you enjoyed the experience of <b>ELLA</b> Electronic Learning Assistant :) </div><div><br></div>',
         };
     }
 
