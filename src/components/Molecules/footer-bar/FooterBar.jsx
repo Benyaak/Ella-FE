@@ -9,7 +9,7 @@ const style = {
     position: "fixed",
     left: "0",
     bottom: "0",
-    height: "60px",
+    height: "80px",
     width: "100%",
     color: 'white'
 }
@@ -17,7 +17,7 @@ const style = {
 const phantom = {
   display: 'block',
   padding: '20px',
-  height: '60px',
+  height: '80px',
   width: '100%',
 }
 
@@ -29,7 +29,17 @@ function Footer({ children }) {
         <div style={style}>
           { children }
           <div>
-            
+            Project developed during the 
+            {' '}
+            <a style={{color: 'yellow'}} href='google.com'>#EUVSVIRUS</a>
+            {' '}
+    hackathon by 
+            {' '}
+            {'\n'} 
+            {' '}
+            <b>Stefan Pristoleanu, Andrei Ghinea, Denis Stoica, Luca Avram, Radu Filipescu, Andrei Glameanu and Alexandru Zaharia.  </b>
+            {' '}
+Stay safe ♡
             
           </div>
         </div>

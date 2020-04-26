@@ -6,6 +6,7 @@ import FooterBar from '../../components/Molecules/footer-bar/FooterBar';
 import UploadFileButton from '../../components/Atoms/upload-file-button/UploadFileButton';
 import PDFViewer from '../../components/Molecules/pdf-viewer/PDFViewer';
 import IntroductionPanel from '../../components/Atoms/introduction-panel/IntroductionPanel';
+import RatingButtons from '../../components/Atoms/rating-buttons/RatingButtons';
 
 export const Home = () => {
   const dispatch = useDispatch();
@@ -17,9 +18,9 @@ export const Home = () => {
     <div>
       <HeaderBar />
       <UploadFileButton />
-      <PDFViewer path='./Document_Medical_Stef.pdf' />
       <IntroductionPanel />
-      
+      <PDFViewer path='./Document_Medical_Stef.pdf' />
+      <RatingButtons />
       <FooterBar />
       
     </div>

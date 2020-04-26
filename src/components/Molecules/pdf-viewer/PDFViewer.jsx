@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import {Paginator} from 'primereact/paginator';
 import { Document, Page, pdfjs } from "react-pdf";
-import {Panel} from 'primereact/panel';
 
  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 // import '../assets/react-pdf/dist/Page/AnnotationLayer.css';
@@ -54,12 +53,6 @@ class PDFViewer extends Component {
     return (
       <div style={{ textAlign: 'center' }}>
           <div style={{ width: '613px', display: 'inline-block' }}>
-          <Panel header="Godfather I" toggleable={true}>
-    The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
-    His beloved son Michael has just come home from the war, but does not intend to become part of his father's business.
-    Through Michael's life the nature of the family business becomes clear. The business of the family is just like the head of the family,
-    kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against the good of the family.
-</Panel>
         <div>
         <p>
 Page {' '}

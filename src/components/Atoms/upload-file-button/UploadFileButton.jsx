@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import {Growl} from 'primereact/growl';
 import {FileUpload} from 'primereact/fileupload';
-
-;
+import {Panel} from 'primereact/panel';
 
 class NextPageBar extends Component {
     constructor() {
@@ -19,15 +18,18 @@ class NextPageBar extends Component {
         return (
           <div style={{ textAlign: 'center' }}>
             <div style={{ width: '613px', display: 'inline-block' }}>
-              <FileUpload
-                name="demo[]"
-                url="./upload.php"
-                onUpload={this.onUpload}
-                multiple
-                accept="image/*"
-                maxFileSize={1000000}
-              />
-              <Growl ref={(el) => { this.growl = el; }} />
+              <Panel header="Upload a new lecture:">
+                <FileUpload
+                  name="demo[]"
+                  url="./upload.php"
+                  onUpload={this.onUpload}
+                  multiple
+                  accept="image/*"
+                  maxFileSize={1000000}
+                />
+                <Growl ref={(el) => { this.growl = el; }} />
+              </Panel>
+              
             </div>
           </div>
         );
