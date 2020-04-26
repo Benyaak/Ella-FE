@@ -25,7 +25,6 @@ class NextPageBar extends Component {
                   onUpload={this.onUpload}
                   multiple
                   accept="image/*"
-                  maxFileSize={1000000}
                 />
                 <Growl ref={(el) => { this.growl = el; }} />
               </Panel>
