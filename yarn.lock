@@ -12131,6 +12131,16 @@ pretty-ms@^5.0.0:
   dependencies:
     parse-ms "^2.1.0"
 
+primeicons@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-2.0.0.tgz#ec3e5a8d4d04a09309225a5a57deb911e08dc0d3"
+  integrity sha512-GJTCeMSQU8UU1GqbsaDrg/IH+b/vSinJQl52NVpdJ7sShYLZA8Eq6jLF48Ye3N/dQloGrE07i7XsZvxQ9pNbqg==
+
+primereact@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/primereact/-/primereact-4.2.0.tgz#0fc62ab404e9e90957eadf9b5851c9d290c3e7a5"
+  integrity sha512-/DZyUztlodGeYoLyJBRayhD5ktN1/JahvkaBz/Pwx9KydFIMY+H0FNGPl37SkMxjObsFFIMHh/nwUEYZoLNTLw==
+
 prismjs@^1.8.4:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.20.0.tgz#9b685fc480a3514ee7198eac6a3bf5024319ff03"

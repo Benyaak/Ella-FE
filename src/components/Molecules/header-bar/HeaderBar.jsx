@@ -2,26 +2,39 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { PropTypes } from 'prop-types';
-import HeaderLogo from '../../Atoms/header-logo/HeaderLogo';
-import LoginButton from '../../Atoms/login-button/LoginButton'
-import RegisterButton from '../../Atoms/register-button/RegisterButton'
-import HeaderUserDropdown from '../../Atoms/header-user-dropdown/HeaderUserDropdown';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
+import {Button} from 'primereact/button';
 
-const HeaderBar = ({isLoggedIn}) => (
-  <Navbar bg="light" expand="lg">
-    <HeaderLogo text='ELLA' />
-    <Nav>Electronic Learning Assistant</Nav>
+const HeaderBar = () => (
+  <Navbar
+    bg="light"
+    expand="lg"
+  >
+    <img
+      alt=""
+      src="/logofinal FULL HD.png"
+      width="100"
+      height="50"
+      className="d-inline-block align-top"
+    />
+    <Navbar.Brand href="#home">Electronic Learning Assistant</Navbar.Brand>
+    <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto" />
-      {!isLoggedIn && <LoginButton text='Login' />}
-      {!isLoggedIn && <RegisterButton text='Register' />}
-      {isLoggedIn && <HeaderUserDropdown itemText1='My Account' itemText2='Logout' itemHref1='link1' itemHref2='logout' />}
+      <Nav className="mr-auto">
+        <Nav.Link href="home">Home</Nav.Link>
+        <NavDropdown title="Upload Lecture" id="basic-nav-dropdown">
+          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+          <NavDropdown.Divider />
+          <NavDropdown.Item href="newUpload">New Uploads</NavDropdown.Item>
+        </NavDropdown>
+      </Nav>
+      <Form inline>
+        <Button className="p-button-success p-button-raised" label="Login" icon="pi pi-sign-in" iconPos="right" />
+        <Button className="p-button-secondary p-button-raised" label="Register" icon="pi pi-user-edit" iconPos="right" />
+      </Form>
     </Navbar.Collapse>
   </Navbar>
 );
-
-HeaderBar.propTypes = {
-    isLoggedIn: PropTypes.bool.isRequired,
-};
 
 export default HeaderBar;
