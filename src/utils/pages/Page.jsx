@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled from 'styled-components/macro';
-
+import HeaderBar from '../../components/Molecules/header-bar/HeaderBar';
 // Components
 // TODO FOOTER, HEADER
 
@@ -30,6 +30,7 @@ export default Input => {
           <OverflowController>
             <MaxWidth>
               <ContentContainer>
+                <HeaderBar isLoggedIn={false} />
                 <Input {...this.props} />
               </ContentContainer>
             </MaxWidth>
