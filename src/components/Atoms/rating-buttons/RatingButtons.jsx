@@ -7,9 +7,8 @@ class RatingButtons extends Component {
     constructor() {
         super();
         this.state = {
-            val1: null,
-            val2: null,
-            text1 : '<div>Hello dear user!</div><div>Hope you enjoyed the experience of <b>ELLA</b> Electronic Learning Assistant :) coae ce somn mi e</div><div><br></div>',
+            ratingValue: null,
+            editorText : '<div>Hello dear user!</div><div>Hope you enjoyed the experience of <b>ELLA</b> Electronic Learning Assistant :) coae ce somn mi e</div><div><br></div>',
         };
     }
 
@@ -28,15 +27,15 @@ class RatingButtons extends Component {
         return (
           <div style={{ textAlign: 'center' }}>
             <div style={{ width: '613px', display: 'inline-block' }}>
-              <Rating value={this.state.val1} onChange={(e) => this.setState({val1: e.value})} />
+              <Rating value={this.state.ratingValue} onChange={(e) => this.setState({ratingValue: e.value})} />
               <h5 className="first">
 Please rate your experience. Feedback will be taken into account.
                 <br />
-                {this.state.val1}  
+                {this.state.ratingValue}  
                 {' '}
-                {this.state.val1 && ' stars. Thank you!'}
+                {this.state.ratingValue && ' stars. Thank you!'}
                 <hr/>
-                {this.state.val1 && <Editor style={{height:'320px'}} value={this.state.text1} onTextChange={(e)=>this.setState({text1:e.htmlValue})} />}
+                {this.state.ratingValue && <Editor style={{height:'320px'}} value={this.state.editorText} onTextChange={(e)=>this.setState({text1:e.editorText})} />}
                 <Button label="Clear & send" icon="pi pi-times" onClick={()=> this.setState({text1:''})}/>
               </h5>
             </div>

@@ -80,7 +80,6 @@ class HeaderBar extends Component {
                 />
                 <div style={{ float: 'right', marginTop: '25px', display: 'float'}}>
                   <GDPRButton />
-                  <b>{'I consent to GDPR and allow the use of my words to improve ELLA\'s responses '}</b>
                 </div>
               </div>
             </div>
