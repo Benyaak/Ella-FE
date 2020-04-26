@@ -31,7 +31,7 @@ function Footer({ children }) {
           <div>
             Project developed during the 
             {' '}
-            <a style={{color: 'yellow'}} href='google.com'>#EUVSVIRUS</a>
+            <a style={{color: 'yellow'}} href='google.com'>#EUvsVIRUS</a>
             {' '}
     hackathon by 
             {' '}

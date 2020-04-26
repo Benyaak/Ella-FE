@@ -20,6 +20,7 @@ class IntroductionPanel extends Component {
                 <b>scalability, reliablity and quality</b>
                 {' '}
 of the system. 
+          <br /> Alternatively, please check out the <b>user statistics</b> below:
               </Panel>
             </div>
           </div>

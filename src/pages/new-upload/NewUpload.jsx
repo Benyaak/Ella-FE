@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import HeaderBar from '../../components/Molecules/header-bar/HeaderBar';
-import PDFViewer from '../../components/Molecules/pdf-viewer/PDFViewer';
+import PDFViewer from '../../components/Organisms/pdf-viewer/PDFViewer';
 
 export const NewUpload = () => {
   const dispatch = useDispatch();
