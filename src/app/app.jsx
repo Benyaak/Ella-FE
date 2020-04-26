@@ -31,7 +31,7 @@ function App() {
             <Route path="/500" component={InternalError} />
             <Route path="/404" component={NotFound} />
             <Route path="/401" component={Unauthorised} />
-            <Route path="/?#newUpload" component={NewUpload} />
+            <Route path="/newUpload" component={NewUpload} />
             <Route path="/" component={Home} />
             <Route component={Home} />
           </Switch>

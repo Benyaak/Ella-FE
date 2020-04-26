@@ -22,7 +22,7 @@ export const NewUpload = () => {
     <div>
       <HeaderBar />
       <ColoredLine color="gray" />
-      <PDFViewer path='./Document_Medical_Stef.pdf' />
+      <PDFViewer path='./Document_Medical_Stef2.pdf' />
     </div>
   );
 };

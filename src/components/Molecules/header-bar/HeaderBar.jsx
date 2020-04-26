@@ -1,40 +1,92 @@
-import React from 'react';
-import Navbar from 'react-bootstrap/Navbar';
-import Nav from 'react-bootstrap/Nav';
-import { PropTypes } from 'prop-types';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
+import React, {Component} from 'react';
+import {Menubar} from 'primereact/menubar';
 import {Button} from 'primereact/button';
+import {InputText} from "primereact/inputtext";
+import GDPRButton from '../../Atoms/gdpr-button/GDPRButton';
 
-const HeaderBar = () => (
-  <Navbar
-    bg="light"
-    expand="lg"
-  >
-    <img
-      alt=""
-      src="/logofinal FULL HD.png"
-      width="100"
-      height="50"
-      className="d-inline-block align-top"
-    />
-    <Navbar.Brand href="#home">Electronic Learning Assistant</Navbar.Brand>
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-    <Navbar.Collapse id="basic-navbar-nav">
-      <Nav className="mr-auto">
-        <Nav.Link href="home">Home</Nav.Link>
-        <NavDropdown title="Upload Lecture" id="basic-nav-dropdown">
-          <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-          <NavDropdown.Divider />
-          <NavDropdown.Item href="newUpload">New Uploads</NavDropdown.Item>
-        </NavDropdown>
-      </Nav>
-      <Form inline>
-        <Button className="p-button-success p-button-raised" label="Login" icon="pi pi-sign-in" iconPos="right" />
-        <Button className="p-button-secondary p-button-raised" label="Register" icon="pi pi-user-edit" iconPos="right" />
-      </Form>
-    </Navbar.Collapse>
-  </Navbar>
-);
+class HeaderBar extends Component {
+
+    constructor() {
+        super();
+
+        this.state = {
+            items:[
+                {
+                   label:'Electronic Learning Assistant',
+                   icon:'pi pi-fw pi-file',
+                },
+                {
+                   label:<a href='newUpload'>New Uploads</a>,
+                   icon:'pi pi-fw pi-pencil',
+                   href:"newUpload",
+                },
+                {
+                   label:'Users',
+                   icon:'pi pi-fw pi-user',
+                   items:[
+                      {
+                         label:'New',
+                         icon:'pi pi-fw pi-user-plus',
+
+                      },
+                      {
+                         label:'Delete',
+                         icon:'pi pi-fw pi-user-minus',
+
+                      },
+                      {
+                         label:'Search',
+                         icon:'pi pi-fw pi-users',
+                         items:[
+                            {
+                               label:'Filter',
+                               icon:'pi pi-fw pi-filter',
+                               items:[
+                                  {
+                                     label:'Print',
+                                     icon:'pi pi-fw pi-print'
+                                  }
+                               ]
+                            },
+                            {
+                               icon:'pi pi-fw pi-bars',
+                               label:'List'
+                            }
+                         ]
+                      }
+                   ]
+                },
+             ]
+        };
+    }
+
+    render() {
+        return (
+          <div>
+            <div className="content-section implementation">
+              <Menubar model={this.state.items}>
+                <InputText placeholder="Search" type="text" />
+                <Button className="p-button-success p-button-raised" label="Login" icon="pi pi-sign-in" iconPos="right" style={{marginLeft:4}} />
+                <Button className="p-button-secondary p-button-raised" label="Register" icon="pi pi-user-edit" iconPos="right" style={{marginLeft:4}} />
+                <Button className="p-button-raised" label="Logout" icon="pi pi-power-off" style={{marginLeft:4}} />
+              </Menubar>
+              <div style={{ display: 'inline' }}>
+                <img
+                  alt=""
+                  src="/logofinal FULL HD.png"
+                  width="210"
+                  height="100"
+                  className="d-inline-block align-top"
+                />
+                <div style={{ float: 'right', marginTop: '25px', display: 'float'}}>
+                  <GDPRButton />
+                  <b>{'I consent to GDPR and allow the use of my words to improve ELLA\'s responses '}</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+    }
+}
 
 export default HeaderBar;

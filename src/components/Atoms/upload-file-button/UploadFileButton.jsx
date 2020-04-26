@@ -17,16 +17,18 @@ class NextPageBar extends Component {
 
     render() {
         return (
-          <div>
-            <FileUpload
-              name="demo[]"
-              url="./upload.php"
-              onUpload={this.onUpload}
-              multiple
-              accept="image/*"
-              maxFileSize={1000000}
-            />
-            <Growl ref={(el) => { this.growl = el; }} />
+          <div style={{ textAlign: 'center' }}>
+            <div style={{ width: '613px', display: 'inline-block' }}>
+              <FileUpload
+                name="demo[]"
+                url="./upload.php"
+                onUpload={this.onUpload}
+                multiple
+                accept="image/*"
+                maxFileSize={1000000}
+              />
+              <Growl ref={(el) => { this.growl = el; }} />
+            </div>
           </div>
         );
     }

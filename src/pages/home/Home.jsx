@@ -2,6 +2,8 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import GDPRButton from '../../components/Atoms/gdpr-button/GDPRButton';
 import HeaderBar from '../../components/Molecules/header-bar/HeaderBar';
+import FooterBar from '../../components/Molecules/footer-bar/FooterBar';
+import UploadFileButton from '../../components/Atoms/upload-file-button/UploadFileButton';
 import PDFViewer from '../../components/Molecules/pdf-viewer/PDFViewer';
 import IntroductionPanel from '../../components/Atoms/introduction-panel/IntroductionPanel';
 
@@ -10,27 +12,16 @@ export const Home = () => {
   dispatch({
     type: 'TRIGGER_INITIAL_STATE',
   });
-  const ColoredLine = ({ color }) => (
-    <hr
-      style={{
-            color,
-            backgroundColor: color,
-            height: 0.5
-        }}
-    />
-);
   
   return (
     <div>
       <HeaderBar />
-      <ColoredLine color="gray" />
-      <IntroductionPanel />
-      <div>
-        <b>I consent to GDPR and allow the use of my words to improve ELLA's responses</b>
-        <GDPRButton />
-      </div>
-      
+      <UploadFileButton />
       <PDFViewer path='./Document_Medical_Stef.pdf' />
+      <IntroductionPanel />
+      
+      <FooterBar />
+      
     </div>
   );
 };
